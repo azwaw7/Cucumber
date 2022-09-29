@@ -25,14 +25,14 @@ public class OrangeHRMsteps {
 
     @When("^I open orange hrm url$")
     public void i_open_orange_hrm_url() {
-        driver.navigate().to("https://opensource-demo.orangehrmlive.com/");
+        driver.navigate().to("https://demo.nopcommerce.com/");
 
     }
 
-    @Then("^I verify that logo present on page$")
+    @When("^I verify that logo present on page$")
     public void i_verify_that_logo_present_on_page() {
-     Boolean status =   driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[1]/img")).isDisplayed();
-        Assert.assertEquals(true,status);
+     driver.findElement(By.name("q")).sendKeys("camera");
+//     driver.findElement(By.name("password")).sendKeys("Admin123");
     }
 
     @Then("^close browser$")
